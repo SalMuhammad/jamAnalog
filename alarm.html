@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator</title>
+    <style>
+        /* Add some basic styling to the button */
+        #myButton {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #myButton:hover {
+            background-color: #3e8e41;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Create a button to trigger the alarm -->
+    <button id="myButton">Trigger Alarm</button>
+
+    <!-- Add an audio element to play the alarm sound -->
+    <audio id="alarmSound" src="jjj.mp3"></audio>
+    <script>
+        // Get the button and audio elements
+        const button = document.getElementById('myButton');
+        const audio = document.getElementById('alarmSound');
+
+        // Add an event listener to the button
+        button.addEventListener('click', function () {
+            // Set the alarm to sound after 1 minute (60000 milliseconds)
+            setTimeout(function () {
+                // Play the alarm sound
+                audio.play();
+            }, 2000);
+        });
+    </script>
+</body>
+
+</html>
