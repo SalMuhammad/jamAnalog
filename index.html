@@ -93,10 +93,13 @@
 </div>
  
 
- 
- 
- 
- 
+  <!-- Create a button to trigger the alarm -->
+    <button id="myButton">Trigger Alarm</button>
+
+    <!-- Add an audio element to play the alarm sound -->
+    <audio id="alarmSound" src="jjj.mp3"></audio>
+
+	
 <script type="text/javascript">
 	const secondHand = document.querySelector('.jarum_detik');
 	const minuteHand = document.querySelector('.jarum_menit');
@@ -124,6 +127,20 @@
 	}
  
 	setInterval(setDate, 1000)
+
+	 <script>
+        // Get the button and audio elements
+        const button = document.getElementById('myButton');
+        const audio = document.getElementById('alarmSound');
+
+        // Add an event listener to the button
+        button.addEventListener('click', function () {
+            // Set the alarm to sound after 1 minute (60000 milliseconds)
+            setTimeout(function () {
+                // Play the alarm sound
+                audio.play();
+            }, 2000);
+        });
 </script>
 </body>
 </html>
