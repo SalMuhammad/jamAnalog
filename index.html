@@ -127,6 +127,7 @@
                 <option value="india.m4a">india</option>
             </select>
         </div>
+        <div id="countdown" class="mt-4 text-2xl font-bold mb-1"></div>
         <button id="1-menit"
             class="bg-green-600 mb-2 text-white py-2 px-4 rounded-lg shadow-lg hover:bg-green-700 transition duration-300">Set
             Alarm for 1 Minute</button>
@@ -136,12 +137,11 @@
         <button id="stop-alarm"
             class="bg-red-600 text-white py-2 px-4 rounded-lg shadow-lg hover:bg-red-700 transition duration-300 mt-4">Stop
             All Alarms</button>
-        <div id="countdown" class="mt-4 text-2xl font-bold"></div>
     </div>
 
     <script>
         // Ambil elemen jarum detik, menit, dan jam
-        let durasi = 3000
+        let durasi = 60000
         const jarumDetik = document.querySelector('.jarum_detik');
         const jarumMenit = document.querySelector('.jarum_menit');
         const jarumJam = document.querySelector('.jarum_jam');
