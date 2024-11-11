@@ -1,2 +1,0 @@
-# jamAnalog
-Hanya jam biasa

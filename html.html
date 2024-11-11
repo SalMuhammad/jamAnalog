@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Alarm</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-green-50 text-green-900 flex items-center justify-center min-h-screen">
+
+    <div class="text-center">
+        <h1 class="text-4xl font-bold mb-8">Set Your Alarm</h1>
+        <div class="mb-4">
+            <label for="alarmTime" class="block text-lg font-medium mb-2">Enter time in minutes:</label>
+            <input type="number" id="alarmTime" class="border border-green-600 rounded-lg py-2 px-4 w-1/2 mx-auto" placeholder="e.g., 10">
+        </div>
+        <div class="mb-4">
+            <label for="alarmSound" class="block text-lg font-medium mb-2">Select Alarm Sound:</label>
+            <select id="alarmSound" class="border border-green-600 rounded-lg py-2 px-4 w-1/2 mx-auto">
+                <option value="tetang.m4a">tenang</option>
+                <option value="darurat.m4a">darurat</option>
+                <option value="santai.m4a">santai</option>
+                <option value="india.m4a">india</option>
+            </select>
+        </div>
+        <button id="1-menit" class="bg-green-600 text-white py-2 px-4 rounded-lg shadow-lg hover:bg-green-700 transition duration-300">Set Alarm for 1 Minute</button>
+        <button id="2-menit" class="bg-green-600 text-white py-2 px-4 rounded-lg shadow-lg hover:bg-green-700 transition duration-300">Set Alarm for 2 Minutes</button>
+        <button id="stop-alarm" class="bg-red-600 text-white py-2 px-4 rounded-lg shadow-lg hover:bg-red-700 transition duration-300 mt-4">Stop All Alarms</button>
+    </div>
+
+    <script>
+        let alarmSounds = [];
+        let alarmTimeouts = [];
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const defaultSound = 'tenang.m4a';
+            const savedSound = localStorage.getItem('alarmSound') || defaultSound;
+            document.getElementById('alarmSound').value = savedSound;
+            localStorage.setItem('alarmSound', savedSound);
+
+            document.getElementById('alarmSound').addEventListener('change', (event) => {
+                localStorage.setItem('alarmSound', event.target.value);
+            });
+
+            const setAlarm = (minutes) => {
+                alarmSounds.forEach(sound => sound.pause());
+                alarmSounds = [];
+                alarmTimeouts.forEach(timeout => clearTimeout(timeout));
+                alarmTimeouts = [];
+
+                const timeout = setTimeout(() => {
+                    const alarmSound = new Audio(localStorage.getItem('alarmSound'));
+                    alarmSound.play();
+                    alarmSounds.push(alarmSound);
+                }, minutes * 800); // Convert minutes to milliseconds
+
+                alarmTimeouts.push(timeout);
+            };
+
+            document.getElementById('1-menit').addEventListener('click', () => setAlarm(1));
+            document.getElementById('2-menit').addEventListener('click', () => setAlarm(2));
+
+            document.getElementById('stop-alarm').addEventListener('click', () => {
+                alarmSounds.forEach(sound => sound.pause());
+                alarmSounds = [];
+                alarmTimeouts.forEach(timeout => clearTimeout(timeout));
+                alarmTimeouts = [];
+            });
+        });
+    </script>
+
+</body>
+</html>
