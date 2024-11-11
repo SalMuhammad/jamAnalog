@@ -1,87 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Set Alarm</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style type="text/css">
-		h1,
-		h2,
-		p,
-		a {
-			font-family: sans-serif;
-			font-weight: normal;
-		}
+        h1,
+        h2,
+        p,
+        a {
+            font-family: sans-serif;
+            font-weight: normal;
+        }
 
-		.jam_analog_malasngoding {
-			background: #e7f2f7;
-			position: relative;
-			background-position: 0 0px;
-			width: 80vw;
-			height: 80vw;
-			background-size: cover;
-			/* background-image: url(https://cdn.kibrispdr.org/data/373/gambar-jam-dinding-tanpa-jarum-png-35.png);
+        .jam_analog_malasngoding {
+            background: #e7f2f7;
+            position: relative;
+            background-position: 0 0px;
+            width: 80vw;
+            height: 80vw;
+            background-size: cover;
+            /* background-image: url(https://cdn.kibrispdr.org/data/373/gambar-jam-dinding-tanpa-jarum-png-35.png);
 			background-image: url(https://cdn.kibrispdr.org/data/373/gambar-jam-dinding-tanpa-jarum-58.jpg);
 			background-image: url(https://cdn.kibrispdr.org/data/373/gambar-jam-dinding-tanpa-jarum-19.jpg);
             background-image: url(https://w7.pngwing.com/pngs/980/515/png-transparent-clock-face-analog-clock-without-hands-angle-white-text-thumbnail.png) */
-		    background-image: url(jam.png);
-			border: 16px solid #52b6f0;
-			border-radius: 50%;
-			padding: 20px;
-			margin: 20px auto;
-			/* background-color: purple; */
-		}
+            background-image: url(jam.png);
+            border: 16px solid #52b6f0;
+            border-radius: 50%;
+            padding: 20px;
+            margin: 20px auto;
+            /* background-color: purple; */
+        }
 
-		.xxx {
-			height: 100%;
-			width: 100%;
-			position: relative;
-			/*background-color: pink;*/
-		}
+        .xxx {
+            height: 100%;
+            width: 100%;
+            position: relative;
+            /*background-color: pink;*/
+        }
 
-		.jarum {
-			position: absolute;
-			width: 50%;
-			background: #232323;
-			top: 50%;
-			transform: rotate(90deg);
-			transform-origin: 100%;
-			transition: all 0.05s cubic-bezier(0.1, 2.7, 0.58, 1);
-		}
+        .jarum {
+            position: absolute;
+            width: 50%;
+            background: #232323;
+            top: 50%;
+            transform: rotate(90deg);
+            transform-origin: 100%;
+            transition: all 0.05s cubic-bezier(0.1, 2.7, 0.58, 1);
+        }
 
-		.lingkaran_tengah {
-			width: 24px;
-			height: 24px;
-			background: #232323;
-			border: 4px solid #52b6f0;
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			margin-left: -14px;
-			margin-top: -14px;
-			border-radius: 50%;
-		}
+        .lingkaran_tengah {
+            width: 24px;
+            height: 24px;
+            background: #232323;
+            border: 4px solid #52b6f0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: -14px;
+            margin-top: -14px;
+            border-radius: 50%;
+        }
 
-		.jarum_detik {
-			height: 2px;
-			border-radius: 1px;
-			background: #ff0000;
-		}
+        .jarum_detik {
+            height: 2px;
+            border-radius: 1px;
+            background: #ff0000;
+        }
 
-		.jarum_menit {
-			height: 4px;
-			border-radius: 4px;
-		}
+        .jarum_menit {
+            height: 4px;
+            border-radius: 4px;
+        }
 
-		.jarum_jam {
-			height: 8px;
-			border-radius: 4px;
-			width: 35%;
-			left: 15%;
-		}
+        .jarum_jam {
+            height: 8px;
+            border-radius: 4px;
+            width: 35%;
+            left: 15%;
+        }
 
-		/* button {
+        /* button {
 			display: block;
 			margin: 0 auto;
 			width: 600px;
@@ -93,156 +94,163 @@
 			border-radius: 5px;
 			cursor: pointer;
 		} */
-		.center {
-			color: #fff;
-			text-align: center;
-		}
-	</style>
+        .center {
+            color: #fff;
+            text-align: center;
+        }
+    </style>
 </head>
+
 <body class="bg-green-50 text-green-900 flex items-center justify-center min-h-screen">
     <div class="text-center">
-    <div class="jam_analog_malasngoding">
-		<div class="xxx">
-			<div class="jarum jarum_detik"></div>
-			<div class="jarum jarum_menit"></div>
-			<div class="jarum jarum_jam"></div>
-			<div class="lingkaran_tengah"></div>
-		</div>
-	</div>
-        <h1 class="text-4xl font-bold mb-8">Set Your Alarm</h1>
-        <div class="mb-4">
-            <label for="alarmTime" class="block text-lg font-medium mb-2">Enter time in minutes:</label>
-            <input type="number" id="alarmTime" class="border border-green-600 rounded-lg py-2 px-4 w-1/2 mx-auto" placeholder="e.g., 10">
+        <div class="jam_analog_malasngoding">
+            <div class="xxx">
+                <div class="jarum jarum_detik"></div>
+                <div class="jarum jarum_menit"></div>
+                <div class="jarum jarum_jam"></div>
+                <div class="lingkaran_tengah"></div>
+            </div>
         </div>
-        <div class="mb-4">
+
+        <h1 class="text-4xl font-bold">Set Your Alarm</h1>
+        <!-- <div class="mb-4">
+            <label for="alarmTime" class="block text-lg font-medium mb-2">Enter time in minutes:</label>
+            <input type="number" id="alarmTime" class="border border-green-600 rounded-lg py-2 px-4 w-1/2 mx-auto"
+                placeholder="e.g., 10">
+        </div> -->
+        <div class="my-2">
             <label for="alarmSound" class="block text-lg font-medium mb-2">Select Alarm Sound:</label>
             <select id="alarmSound" class="border border-green-600 rounded-lg py-2 px-4 w-1/2 mx-auto">
-                <option value="tetang.m4a">tenang</option>
+                <option value="tenang.m4a">tenang</option>
                 <option value="darurat.m4a">darurat</option>
                 <option value="santai.m4a">santai</option>
                 <option value="india.m4a">india</option>
             </select>
         </div>
-        <button id="1-menit" class="bg-green-600 text-white py-2 px-4 rounded-lg shadow-lg hover:bg-green-700 transition duration-300">Set Alarm for 1 Minute</button>
-        <button id="2-menit" class="bg-green-600 text-white py-2 px-4 rounded-lg shadow-lg hover:bg-green-700 transition duration-300">Set Alarm for 2 Minutes</button>
-        <button id="stop-alarm" class="bg-red-600 text-white py-2 px-4 rounded-lg shadow-lg hover:bg-red-700 transition duration-300 mt-4">Stop All Alarms</button>
+        <button id="1-menit"
+            class="bg-green-600 mb-2 text-white py-2 px-4 rounded-lg shadow-lg hover:bg-green-700 transition duration-300">Set
+            Alarm for 1 Minute</button>
+        <button id="2-menit"
+            class="bg-green-600 text-white py-2 px-4 rounded-lg shadow-lg hover:bg-green-700 transition duration-300">Set
+            Alarm for 2 Minutes</button>
+        <button id="stop-alarm"
+            class="bg-red-600 text-white py-2 px-4 rounded-lg shadow-lg hover:bg-red-700 transition duration-300 mt-4">Stop
+            All Alarms</button>
         <div id="countdown" class="mt-4 text-2xl font-bold"></div>
     </div>
 
     <script>
+        // Ambil elemen jarum detik, menit, dan jam
+        let durasi = 3000
+        const jarumDetik = document.querySelector('.jarum_detik');
+        const jarumMenit = document.querySelector('.jarum_menit');
+        const jarumJam = document.querySelector('.jarum_jam');
+        let intervalHitungMundur = null; // Variabel untuk menyimpan interval hitung mundur
+        let audioAlarm = null; // Variabel untuk menyimpan objek audio alarm
 
-const secondHand = document.querySelector('.jarum_detik');
-		const minuteHand = document.querySelector('.jarum_menit');
-		const jarum_jam = document.querySelector('.jarum_jam');
+        // Fungsi untuk mengatur jam analog
+        function aturJam() {
+            const sekarang = new Date();
+            const detik = sekarang.getSeconds();
+            const derajatDetik = ((detik / 60) * 360) + 90;
+            jarumDetik.style.transform = `rotate(${derajatDetik}deg)`;
+            const menit = sekarang.getMinutes();
+            const derajatMenit = ((menit / 60) * 360) + 90;
+            jarumMenit.style.transform = `rotate(${derajatMenit}deg)`;
+            const jam = sekarang.getHours();
+            const derajatJam = ((jam / 12) * 360) + 90;
+            jarumJam.style.transform = `rotate(${derajatJam}deg)`;
+        }
 
-		function setDate() {
-			const now = new Date();
+        // Jalankan fungsi `aturJam` setiap detik
+        setInterval(aturJam, 1000);
 
-			const seconds = now.getSeconds();
-			const secondsDegrees = ((seconds / 60) * 360) + 90;
-			secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
-			if (secondsDegrees === 90) {
-				secondHand.style.transition = 'none';
-			} else if (secondsDegrees >= 91) {
-				secondHand.style.transition = 'all 0.05s cubic-bezier(0.1, 2.7, 0.58, 1)'
-			}
+        // Atur suara alarm awal di localStorage jika belum ada
+        if (!localStorage.getItem('suaraAlarmDefault')) {
+            localStorage.setItem('suaraAlarmDefault', 'tenang.m4a');
+        }
 
-			const minutes = now.getMinutes();
-			const minutesDegrees = ((minutes / 60) * 360) + 90;
-			minuteHand.style.transform = `rotate(${minutesDegrees}deg)`;
-
-			const hours = now.getHours();
-			const hoursDegrees = ((hours / 12) * 360) + 90;
-			jarum_jam.style.transform = `rotate(${hoursDegrees}deg)`;
-		}
-
-		setInterval(setDate, 1000)
-		// Get the button and audio elements
-		const stopButton = document.getElementById('stopButton');
-		const button = document.getElementById('myButton');
-		const audio = document.getElementById('alarmSound');
-
-		// Add an event listener to the button
-		button.addEventListener('click', function () {
-			// Set the alarm to sound after 1 minute (60000 milliseconds)
-			setTimeout(function () {
-				// Play the alarm sound
-				audio.play();
-			}, 60000);
-
-
-			// Add an event listener to the stop button
-			stopButton.addEventListener('click', function () {
-				// Stop the alarm sound
-				audio.pause();
-				audio.currentTime = 0;
-			});
-		})
-
-
-
-
-
-
-
-
-
-
-        let alarmSounds = [];
-        let alarmTimeouts = [];
-        let countdownInterval;
-
-        document.addEventListener('DOMContentLoaded', () => {
-            const defaultSound = 'tenang.m4a';
-            const savedSound = localStorage.getItem('alarmSound') || defaultSound;
-            document.getElementById('alarmSound').value = savedSound;
-            localStorage.setItem('alarmSound', savedSound);
-
-            document.getElementById('alarmSound').addEventListener('change', (event) => {
-                localStorage.setItem('alarmSound', event.target.value);
-            });
-
-            const setAlarm = (minutes) => {
-                alarmSounds.forEach(sound => sound.pause());
-                alarmSounds = [];
-                alarmTimeouts.forEach(timeout => clearTimeout(timeout));
-                alarmTimeouts = [];
-                clearInterval(countdownInterval);
-
-                const endTime = Date.now() + minutes * 60000;
-                countdownInterval = setInterval(() => {
-                    const remainingTime = endTime - Date.now();
-                    if (remainingTime <= 0) {
-                        clearInterval(countdownInterval);
-                        document.getElementById('countdown').textContent = '';
-                    } else {
-                        const seconds = Math.floor(remainingTime / 1000);
-                        document.getElementById('countdown').textContent = `Time remaining: ${seconds} seconds`;
-                    }
-                }, 1000);
-
-                const timeout = setTimeout(() => {
-                    const alarmSound = new Audio(localStorage.getItem('alarmSound'));
-                    alarmSound.play();
-                    alarmSounds.push(alarmSound);
-                }, minutes * 60000); // Convert minutes to milliseconds
-
-                alarmTimeouts.push(timeout);
-            };
-
-            document.getElementById('1-menit').addEventListener('click', () => setAlarm(1));
-            document.getElementById('2-menit').addEventListener('click', () => setAlarm(2));
-
-            document.getElementById('stop-alarm').addEventListener('click', () => {
-                alarmSounds.forEach(sound => sound.pause());
-                alarmSounds = [];
-                alarmTimeouts.forEach(timeout => clearTimeout(timeout));
-                alarmTimeouts = [];
-                clearInterval(countdownInterval);
-                document.getElementById('countdown').textContent = '';
-            });
+        // Event untuk memperbarui suara alarm default
+        document.getElementById('alarmSound').addEventListener('change', () => {
+            const suaraAlarm = document.getElementById('alarmSound').value;
+            localStorage.setItem('suaraAlarmDefault', suaraAlarm);
         });
+
+        // Fungsi untuk memutar suara alarm
+        function putarSuaraAlarm() {
+            const suaraAlarm = localStorage.getItem('suaraAlarmDefault');
+            audioAlarm = new Audio(suaraAlarm);
+            audioAlarm.play();
+        }
+
+        // Fungsi untuk mengatur alarm dengan hitungan mundur
+        function aturAlarm(menit) {
+            const elemenHitungMundur = document.getElementById('countdown');
+            const waktuAkhir = Date.now() + menit * durasi;
+
+            // Hentikan suara alarm jika sedang berputar
+            hentikanAlarm();
+
+            // Nonaktifkan tombol selama hitung mundur berlangsung
+            document.getElementById('1-menit').disabled = true;
+            document.getElementById('2-menit').disabled = true;
+
+            // Ubah tombol stop menjadi penghenti hitung mundur
+            document.getElementById('stop-alarm').textContent = 'Hentikan Hitung Mundur';
+            document.getElementById('stop-alarm').onclick = hentikanHitungMundur;
+
+            // Fungsi untuk memperbarui tampilan hitungan mundur
+            function perbaruiHitungMundur() {
+                const waktuTersisa = waktuAkhir - Date.now();
+                if (waktuTersisa <= 0) {
+                    elemenHitungMundur.textContent = 'Waktu habis! Memutar alarm...';
+                    putarSuaraAlarm();
+                    clearInterval(intervalHitungMundur);
+                    resetUI();
+                } else {
+                    const menitTersisa = Math.floor(waktuTersisa / durasi);
+                    const detikTersisa = Math.floor((waktuTersisa % durasi) / 1000);
+                    elemenHitungMundur.textContent = `Hitungan mundur: ${menitTersisa}m ${detikTersisa}s`;
+                }
+            }
+
+            // Mulai interval hitung mundur
+            intervalHitungMundur = setInterval(perbaruiHitungMundur, 1000);
+            perbaruiHitungMundur(); // Panggil segera untuk memperbarui tampilan awal
+        }
+
+        // Fungsi untuk mengatur ulang UI setelah hitung mundur selesai atau alarm dihentikan
+        function resetUI() {
+            document.getElementById('1-menit').disabled = false;
+            document.getElementById('2-menit').disabled = false;
+            document.getElementById('stop-alarm').textContent = 'Hentikan Semua Alarm';
+            document.getElementById('stop-alarm').onclick = hentikanAlarm;
+        }
+
+        // Fungsi untuk menghentikan suara alarm
+        function hentikanAlarm() {
+            if (audioAlarm) {
+                audioAlarm.pause();
+                audioAlarm.currentTime = 0;
+                audioAlarm = null;
+            }
+            document.getElementById('countdown').textContent = 'Semua alarm dihentikan';
+        }
+
+        // Fungsi untuk menghentikan hitung mundur
+        function hentikanHitungMundur() {
+            clearInterval(intervalHitungMundur);
+            document.getElementById('countdown').textContent = 'Hitungan mundur dihentikan';
+            resetUI();
+        }
+
+        // Event listener untuk tombol
+        document.getElementById('1-menit').addEventListener('click', () => aturAlarm(1));
+        document.getElementById('2-menit').addEventListener('click', () => aturAlarm(2));
+        document.getElementById('stop-alarm').addEventListener('click', hentikanAlarm);
+
     </script>
 
 </body>
+
 </html>
